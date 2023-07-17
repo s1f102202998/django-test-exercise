@@ -34,7 +34,7 @@ def detail(request, task_id):
   }
   return render(request, 'todo/detail.html', context)
 
-  def update(request, task_id):
+def update(request, task_id):
     try:
         tsak = Task.objects.get(pk=task_id)
 
