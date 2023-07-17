@@ -36,7 +36,7 @@ def detail(request, task_id):
 
 def update(request, task_id):
     try:
-        tsak = Task.objects.get(pk=task_id)
+        task = Task.objects.get(pk=task_id)
 
     except Task.DoesNotExist:
         raise Http404("Task does not exist")
