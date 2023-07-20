@@ -6,11 +6,12 @@
     <title>To Do Application</title>
     <meta charset="UTF-8">
     <meta name="author" content="INIAD">
+    <link href="{% static 'todo/css/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
     <h1>Edit task</h1>
-    <p>You can edit tasks from the following form.</p>
+    <p id="title">You can edit tasks from the following form.</p>
     <form action="{% url 'update' task.id%}" method="post">
         {% csrf_token %}
         <div>

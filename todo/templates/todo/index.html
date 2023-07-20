@@ -6,11 +6,12 @@
     <title>To Do Application</title>
     <meta charset="UTF-8">
     <meta name="author" content="INIAD">
+    <link href="{% static 'todo/css/style.css' %}" rel="stylesheet">
   </head>
 
   <body>
     <h1>To do アプリケーション</h1>
-    <p>以下のフォームからタスクを送信できます。</p>
+    <p id="title">以下のフォームからタスクを送信できます。</p>
     <form action="{% url 'index' %}" method="post">
       {% csrf_token %}
       <div>
