@@ -47,7 +47,7 @@ def update(request, task_id):
         task.due_at = make_aware(parse_datetime(request.POST['due_at']))
         task.save()
         return redirect(detail, task_id)
-    
+
     context = {
         'task': task
     }
