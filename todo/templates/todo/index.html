@@ -9,27 +9,27 @@
   </head>
 
   <body>
-    <h1>Sample To Do Application</h1>
-    <p>You can submit tasks from the following form.</p>
+    <h1>To do アプリケーション</h1>
+    <p>以下のフォームからタスクを送信できます。</p>
     <form action="{% url 'index' %}" method="post">
       {% csrf_token %}
       <div>
-        <label for="titleInput">Title</label><br>
+        <label for="titleInput">タイトル</label><br>
         <input id="titleInput" name="title" type="text" placeholder="Input title">
       </div>
       <div>
-        <label for="dueInput">Due at:</label><br>
+        <label for="dueInput">締め切り日:</label><br>
         <input id="dueInput" name="due_at" type="datetime-local">
       </div>
       <div>
-        <button type="submit">Submit</button>
+        <button type="submit">送信</button>
       </div>
     </form>
     <br>
 
     <div>
-      <a href="{% url 'index' %}?order=due">Sort by Due Date</a> |
-      <a href="{% url 'index' %}?order=post">Sort by Posted Date</a>
+      <a href="{% url 'index' %}?order=due">期限順</a> |
+      <a href="{% url 'index' %}?order=post">投稿日順</a>
     </div>
 
     {% for task in tasks %}
